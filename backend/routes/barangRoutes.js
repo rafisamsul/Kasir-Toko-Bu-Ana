@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
+
 const {
   getBarang,
   tambahBarang,
   updateBarang,
-  hapusBarang,
+  hapusBarang
 } = require("../controllers/barangController");
 
 router.get("/", getBarang);
@@ -13,3 +14,5 @@ router.put("/:id", updateBarang);
 router.delete("/:id", hapusBarang);
 
 module.exports = router;
+console.log("Barang route loaded!");
+
